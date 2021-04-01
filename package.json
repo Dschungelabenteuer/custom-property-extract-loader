@@ -1,0 +1,57 @@
+{
+  "name": "custom-property-extract-loader",
+  "version": "1.1.1",
+  "description": "Webpack loader for custom-property-extract",
+  "main": "dist/loader.js",
+  "scripts": {
+    "build": "babel src src --out-dir dist --copy-files",
+    "test": "jest",
+    "test:watch": "npm run test -- --watch",
+    "prepublishOnly": "npm test",
+    "preversion": "npm test",
+    "version": "git add *",
+    "postversion": "git push && git push --tags"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dschungelabenteuer/custom-property-extract-loader.git"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "keywords": [
+    "scss",
+    "css",
+    "variables",
+    "stylesheets",
+    "custom properties",
+    "sass",
+    "webpack loader"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "author": "Charles Gruenais <charles.gruenais@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dschungelabenteuer/custom-property-extract-loader/issues"
+  },
+  "homepage": "https://github.com/Dschungelabenteuer/custom-property-extract-loader#readme",
+  "peerDependencies": {
+    "custom-property-extract": "^1.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.13.12",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3",
+    "loader-utils": "^2.0.0",
+    "memfs": "^3.2.0",
+    "schema-utils": "^3.0.0",
+    "webpack": "^5.28.0"
+  }
+}
