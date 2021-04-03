@@ -36,7 +36,7 @@ availableFileSyntaxes.forEach((syntax) => {
     const stats = await compiler(`example.${syntax}`, { syntax });
     const output = stats.toJson({ source: true }).modules[0].source;
 
-    expect(output).toBe(`export default ${getExpectedOutput(syntax)}`);
+    expect(output).toBe(`module.exports = ${getExpectedOutput(syntax)}`);
   });
 
   test(`Outputs unprefixed custom properties object for ${syntax.toUpperCase()}`, async () => {
@@ -44,7 +44,7 @@ availableFileSyntaxes.forEach((syntax) => {
     const stats = await compiler(`example.${syntax}`, { syntax, prefix });
     const output = stats.toJson({ source: true }).modules[0].source;
 
-    expect(output).toBe(`export default ${getExpectedOutput(syntax, prefix)}`);
+    expect(output).toBe(`module.exports = ${getExpectedOutput(syntax, prefix)}`);
   });
 
 });
