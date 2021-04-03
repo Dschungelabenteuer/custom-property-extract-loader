@@ -15,7 +15,7 @@ npm install --save-dev custom-property-extract custom-property-extract-loader
 **In require:**
 
 ```js
-const variables = require('custom-property-extract!./style.scss');
+const variables = require('!custom-property-extract!./style.scss');
 ```
 
 **In webpack config:**

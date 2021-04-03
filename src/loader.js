@@ -3,7 +3,7 @@ import { validate } from 'schema-utils';
 import { extract } from 'custom-property-extract';
 import schema from './options.json';
 
-export default function loader(source) {
+module.exports = exports = function loader(source) {
   const options = {
     syntax: 'css',
     prefix: true,
@@ -16,5 +16,5 @@ export default function loader(source) {
   });
 
   source = extract(source, { ...options, source: 'content' });
-  return `export default ${JSON.stringify(source)}`;
+  return `module.exports = ${JSON.stringify(source)}`;
 }
