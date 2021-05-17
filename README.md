@@ -43,5 +43,6 @@ the test properties).
 
 | **Name**             | **Type**    | **Required** | **Default** | **Description**                                               |
 |----------------------|-------------|--------------|-------------|---------------------------------------------------------------|
+| **`mode`**           | `{String}`  | `false`      | `"simple"`  | Output mode (`"simple"`, `"full"`)                            |
 | **`syntax`**         | `{String}`  | `false`      | `"css"`     | Syntax of the source stylesheet (`"css"`, `"scss"`, `"sass"`) |
 | **`prefix`**         | `{Boolean}` | `false`      | `true`      | Determines whether to prefix custom properties with `--`.     |
