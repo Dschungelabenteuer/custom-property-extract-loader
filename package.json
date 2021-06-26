@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/Dschungelabenteuer/custom-property-extract-loader#readme",
   "peerDependencies": {
-    "custom-property-extract": "^1.2.0"
+    "custom-property-extract": "^1.2.1"
   },
   "dependencies": {
     "loader-utils": "^2.0.0",
